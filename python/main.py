@@ -9,10 +9,9 @@ def binary_search(array: list, n: int, start_index: int = 0):
     if item > n:
         # go to the left
         return binary_search(array[:split_index], n, start_index)
-    else:
-        # go to the right
-        start_index += split_index + 1
-        return binary_search(array[split_index + 1 :], n, start_index)
+    # go to the right
+    start_index += split_index + 1
+    return binary_search(array[split_index + 1 :], n, start_index)
 
 
 if __name__ == "__main__":
